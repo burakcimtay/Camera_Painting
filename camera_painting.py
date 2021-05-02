@@ -75,7 +75,7 @@ while True:
         drawPoints(points, colorValues)
         
     if cv2.waitKey(1) & 0xFF==ord('d'):
-        cv2.imwrite('D:/Python/Camera_Painting/paint.jpg', imgResult)
+        cv2.imwrite('paint.jpg', imgResult)
         
     cv2.putText(imgResult,'Burak Cimtay 180208026',(830,30), cv2.FONT_HERSHEY_COMPLEX, 1,(0,0,255),1)
     cv2.imshow("Painting", imgResult)
