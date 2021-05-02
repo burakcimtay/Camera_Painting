@@ -37,4 +37,6 @@ while True:
     cv2.imshow("resimHSV",imgHSV)
     cv2.imshow("Mask",mask)
     cv2.imshow("Result", imgResult)
-    cv2.waitKey(0)
+    
+    if cv2.waitKey(1) & 0xFF==ord('q'):
+        break
