@@ -1,6 +1,6 @@
 # Camera_Painting
 
-First run color_detection.py to understand how it works. (Hold down Q for one second to quit.)
+First run "color_detection.py" to understand how it works. (Hold down Q for one second to quit.)
 Try to choose red by changing the values.
 If you could choose, go to the next step.
 
