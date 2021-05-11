@@ -14,7 +14,7 @@ cv2.createTrackbar("Val Min", "TrackBars", 0, 255, empty)
 cv2.createTrackbar("Val Max", "TrackBars", 255, 255, empty)
 
 while True:
-    img=cv2.imread('ferrari.jpg')
+    img=cv2.imread('images/ferrari.jpg')
     img=cv2.resize(img,(512,341))
     imgHSV=cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     

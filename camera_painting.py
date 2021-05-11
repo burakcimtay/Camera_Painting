@@ -6,6 +6,12 @@ cap.set(3,1600)
 cap.set(4,900)
 cap.set(10,100)
 
+imageFolder="images"
+overlay=[]
+overlayImage=cv2.imread('images/header.png')
+#overlayImage=cv2.resize(overlayImage,(1280,100))
+overlay.append(overlayImage)
+
 colors=[[36,93,92,72,255,255],[92,127,89,159,255,255],[135,172,121,179,255,255],[3,99,247,28,255,255]]       #yesil, mavi, mor, turuncu
 
 colorValues=[[0,255,0],[255,0,0],[255,0,255],[0,127,255]]       #renk kodlari
@@ -77,6 +83,7 @@ while True:
     if cv2.waitKey(1) & 0xFF==ord('d'):
         cv2.imwrite('paint.jpg', imgResult)
         
-    cv2.putText(imgResult,'Burak Cimtay 180208026',(830,30), cv2.FONT_HERSHEY_COMPLEX, 1,(0,0,255),1)
+    cv2.putText(imgResult,'Burak Cimtay 180208026',(830,125), cv2.FONT_HERSHEY_COMPLEX, 1,(0,0,255),1)
+    imgResult[0:100, 0:1600]=overlay[0]
     cv2.imshow("Painting", imgResult)
     
