@@ -39,7 +39,7 @@ def getContours(img):                                                           
     x,y,w,h=0,0,0,0
     for cnt in contours:
         area=cv2.contourArea(cnt)
-        if area>500:
+        if area>300:
             prm=cv2.arcLength(cnt,True)
             approx=cv2.approxPolyDP(cnt, 0.2*prm, True)
             x, y, w, h = cv2.boundingRect(approx)
